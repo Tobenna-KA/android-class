@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
         lateinit var food: String
         binding.button.setOnClickListener {
-            var choice: Int = Random.nextInt(0, 5)
+            var choice: Int = Random.nextInt(0, 6)
             when (choice) {
                 0 -> {
                     food = "Chips"
@@ -26,10 +26,30 @@ class MainActivity : AppCompatActivity() {
                     food = "Rice"
                     binding.backgroud.setBackgroundColor(Color.GREEN)
                 }
-                2 -> food = "Ugali"
-                3 -> food = "Matoke"
-                4 -> food = "Chapati"
-                5 -> food = "Pilau"
+                2 -> {
+                    food = "Ugali"
+                    binding.backgroud.setBackgroundColor(Color.YELLOW)
+                }
+                3 -> {
+                    food = "Matoke"
+                    binding.backgroud.setBackgroundColor(Color.DKGRAY)
+                }
+                4 -> {
+                    food = "Chapati"
+                    binding.backgroud.setBackgroundColor(Color.RED)
+                }
+                5 -> {
+                    food = "Pilau"
+                    binding.backgroud.setBackgroundColor(Color.MAGENTA)
+                }
+                6 -> {
+                    food = "Jollof"
+                    binding.backgroud.setBackgroundColor(Color.CYAN)
+                }
+                7 -> {
+                    food = "Moi Moi"
+                    binding.backgroud.setBackgroundColor(Color.BLUE)
+                }
                 else -> food = "We could not decide"
 
             }
